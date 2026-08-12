@@ -17,6 +17,39 @@
     window.addEventListener("scroll", setNavState, { passive: true });
   }
 
+  /* Mobile hamburger menu */
+  var navToggle = document.querySelector(".nav-toggle");
+  var mobileMenu = document.querySelector(".mobile-menu");
+  if (navToggle && mobileMenu) {
+    var closeMobileMenu = function () {
+      navToggle.setAttribute("aria-expanded", "false");
+      mobileMenu.classList.remove("is-open");
+      document.body.classList.remove("menu-open");
+    };
+    var openMobileMenu = function () {
+      navToggle.setAttribute("aria-expanded", "true");
+      mobileMenu.classList.add("is-open");
+      document.body.classList.add("menu-open");
+    };
+    navToggle.addEventListener("click", function () {
+      var isOpen = navToggle.getAttribute("aria-expanded") === "true";
+      if (isOpen) {
+        closeMobileMenu();
+      } else {
+        openMobileMenu();
+      }
+    });
+    mobileMenu.querySelectorAll("a").forEach(function (link) {
+      link.addEventListener("click", closeMobileMenu);
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") closeMobileMenu();
+    });
+    window.addEventListener("resize", function () {
+      if (window.innerWidth > 960) closeMobileMenu();
+    });
+  }
+
   /* Back-to-top button: fades in once you've scrolled down a bit */
   var backToTop = document.querySelector(".back-to-top");
   if (backToTop) {

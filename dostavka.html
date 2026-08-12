@@ -67,11 +67,29 @@
       </ul>
     </nav>
     <div class="nav-right">
+      <button class="nav-toggle" type="button" aria-label="Меню" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
       <a href="tel:+380XXXXXXXXX" class="nav-phone">+380 XX XXX XX XX</a>
       <a href="kontakty.html" class="btn btn-filled">ЗАМОВИТИ</a>
     </div>
   </div>
 </header>
+<div class="mobile-menu" id="mobileMenu">
+  <nav>
+    <ul class="mobile-menu-links">
+        <li><a href="index.html">Головна</a></li>
+        <li><a href="shcheben.html">Щебінь</a></li>
+        <li><a href="pisok.html">Пісок</a></li>
+        <li><a href="poslugy.html">Перевезення</a></li>
+        <li><a href="dostavka.html" aria-current="page">Доставка</a></li>
+        <li><a href="kontakty.html">Контакти</a></li>
+      </ul>
+  </nav>
+  <a href="tel:+380XXXXXXXXX" class="mobile-menu-phone">+380 XX XXX XX XX</a>
+  <a href="kontakty.html" class="btn btn-filled">ЗАМОВИТИ</a>
+</div>
+
 
 <main id="main">
 
@@ -263,6 +281,10 @@
     </div>
   </div>
 </footer>
+
+<a class="call-fab" href="tel:+380XXXXXXXXX" aria-label="Подзвонити" title="Подзвонити">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+</a>
 
 <button class="back-to-top" aria-label="Повернутись до верху" title="Повернутись до верху">
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
