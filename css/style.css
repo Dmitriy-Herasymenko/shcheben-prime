@@ -278,6 +278,8 @@ section + section { border-top: none; }
   transition: transform 0.5s var(--ease-out);
 }
 .logo:hover .logo-mark { transform: rotate(-8deg) scale(1.06); }
+.logo-big { font-size: 1.35em; font-weight: 700; }
+.logo-small { font-size: 0.85em; font-weight: 500; }
 .logo-mark::after {
   content: "";
   position: absolute;
